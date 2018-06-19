@@ -38,7 +38,7 @@ var HomePage = {
       this.reviews.push(newReviewInfo);
     },
     isPositive: function(inputReview) {
-      
+      inputReview.text.indexOf('sucks') === -1;
     }
   },
   computed: {}
