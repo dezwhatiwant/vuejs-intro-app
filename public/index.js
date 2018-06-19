@@ -4,9 +4,22 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
-      message: "From Backend to Front",
-      message2: "Damn son"
+      tasks: [
+        { id: 1,
+          text: "Make the bed",
+          completed: false
+        },
 
+        { id: 2,
+          text: "Mow the lawn",
+          completed: false
+        },
+
+        { id: 3,
+          text: "Feed the dog",
+          completed: false
+        }
+      ],
     };
   },
   created: function() {},
