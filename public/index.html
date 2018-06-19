@@ -23,7 +23,7 @@
     <h2>Reviews</h2>
 
     <ul>
-      <li v-for="review in reviews">
+      <li v-for="review in reviews" v-if="isPositive(review)">
         <strong>{{ review.rating }} STARS</strong> --- <strong> {{ review.reviewer }} </strong>says <strong>"{{ review.text }}"</strong>
       </li>
     </ul>
