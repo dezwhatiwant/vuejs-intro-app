@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My App</title>
+  <title>Review App Vue.JS</title>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.js"></script>
@@ -24,7 +24,7 @@
 
     <ul>
       <li v-for="review in reviews">
-        {{ review.rating }} STARS --- {{ review.reviewer }}: "{{ review.text }}"
+        <strong>{{ review.rating }} STARS</strong> --- <strong> {{ review.reviewer }} </strong>says <strong>"{{ review.text }}"</strong>
       </li>
     </ul>
 
