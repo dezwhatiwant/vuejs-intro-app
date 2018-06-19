@@ -3,27 +3,41 @@
 var HomePage = {
   template: "#home-page",
   data: function() {
-    return {
-      tasks: [
-        { id: 1,
-          text: "Make the bed",
-          completed: false
+    return {            
+      reviews: [
+        { reviewer: "Jimmy V",
+          rating: 8,
+          text: "Vue.js is cool"
         },
 
-        { id: 2,
-          text: "Mow the lawn",
-          completed: false
+        { reviewer: "Henry",
+          rating: 5,
+          text: "Vue.js is aite"
         },
 
-        { id: 3,
-          text: "Feed the dog",
-          completed: false
+        { reviewer: "Cantalope", 
+          rating: 1,
+          text: "Vue.js sucks hard"
         }
       ],
+      newReview: {
+        text: "",
+        review: "",
+        rating: ""
+      }
     };
   },
   created: function() {},
-  methods: {},
+  methods: {
+    addReview: function() {
+      var newReviewInfo = {
+        text: this.newReview.text,
+        reviewer: this.newReview.reviewer,
+        rating: this.newReview.rating,
+      };
+      this.reviews.push(newReviewInfo);
+    }
+  },
   computed: {}
 };
 
