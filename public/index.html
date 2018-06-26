@@ -22,8 +22,13 @@
 
     <h2>Reviews</h2>
 
+    <div>
+      <button v-on:click="setAttribute('reviewer')">Sort By Reviewer</button>
+      <button v-on:click="setAttribute('text')">Sort By Review</button>
+    </div>
+
     <ul>
-      <li v-for="review in reviews" v-if="isPositive(review)">
+      <li v-for="review in sortedReviews">
        {{ review.rating }} STARS --- {{ review.reviewer }} says"{{ review.text }}"
       </li>
     </ul>
