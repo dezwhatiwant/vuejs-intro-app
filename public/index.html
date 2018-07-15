@@ -1,44 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Review App Vue.JS</title>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.js"></script>
-  <script src="index.js" defer></script>
-</head>
-<body>
-  <div id="vue-app">
+  <head>
+    <meta charset="utf-8">
+    <title>WebGL Demo</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+  </head>
 
-    <router-view></router-view>
+  <body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+  </body>
 
-  </div>
-</body>
+  <script src="gl-matrix.js"></script>
+  <script src="index.js"></script>
 </html>
-
-<template id="home-page">
-  <div class="vue-component">
-
-    <h2>Reviews</h2>
-
-    <div>
-      <button v-on:click="setAttribute('reviewer')">Sort By Reviewer</button>
-      <button v-on:click="setAttribute('text')">Sort By Review</button>
-    </div>
-
-    <ul>
-      <li v-for="review in sortedReviews">
-       {{ review.rating }} STARS --- {{ review.reviewer }} says"{{ review.text }}"
-      </li>
-    </ul>
-
-    <div>
-      Review: <input v-model="newReview.text">
-      Rating: <input v-model="newReview.rating">
-      Your Name: <input v-model="newReview.reviewer">
-      <button v-on:click="addReview()">Add Review</button>
-    </div>
-
-  </div>
-</template>
